@@ -1,8 +1,6 @@
 if (window.location.pathname.indexOf('pages/edit') > -1 || window.location.pathname.indexOf('pages/new') > -1) {
 	// we're in the editor
-	document.write('<style>');
-	document.write('#button_container:hover #form_bucket_box {display: block;}');
-	document.write('</style>');
+	
 } else {
 	// it's showtime
 	var shel = function(id) {
@@ -16,6 +14,13 @@ if (window.location.pathname.indexOf('pages/edit') > -1 || window.location.pathn
 				return(fn.call(el, window.event));   
 			});
 		}
+	}
+	
+	var stylesheets = document.styleSheets;
+	var length = stylesheets.length;
+	for (var i = 0; i < stylesheets.length; i++) {
+		if (stylesheets[i].href != null)
+			stylesheets[i].disabled = stylesheets[i].href.indexOf('admin-styles') > -1 ? true : false; 
 	}
 
 	var wd = {},
