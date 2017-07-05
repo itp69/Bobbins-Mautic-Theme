@@ -111,6 +111,7 @@ if (window.location.pathname.indexOf('pages/edit') > -1 || window.location.pathn
 		form_bucket.style.left = 0;
 		form_bucket.style.top = 0;
 		form_bucket.style.height = 0;
+		form_bucket.style.zIndex = 1001;
 
 		form_bucket_box.style.display = 'block';
 		form_bucket_box.style.position = 'fixed';
