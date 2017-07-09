@@ -198,6 +198,7 @@ a img {
 	padding: 10px 20px;
 	background: rgba(0, 0, 0, .3);
 	border: 1px solid #fff;
+	position: relative;
 }
 
 a.button {
